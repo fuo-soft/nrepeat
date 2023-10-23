@@ -1,0 +1,63 @@
+{
+	"name": "nrepeat",
+	"displayName": "nrepeat",
+	"description": "Repeat text, N times. Text can be anything entered at a prompt, the current selection or the character before the cursor position.",
+	"version": "0.0.1",
+	"publisher": "fuo-soft",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fuo-soft/nrepeat"
+	},
+	"engines": {
+		"vscode": "^1.82.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "nrepeat.nrepeatPrompt",
+				"category": "nRepeat",
+				"title": "Text from Prompt"
+			},
+			{
+				"command": "nrepeat.nrepeatNearCursor",
+				"category": "nRepeat",
+				"title": "Selected Text or Previous Character"
+			}
+		],
+		"configuration": {
+			"title": "nRepeat",
+			"properties": {
+				"nrepeat.selectionAfterRepeat": {
+					"type": "string",
+					"enum": [
+						"keep",
+						"before",
+						"after"
+					],
+					"default": "keep",
+					"description": "What to select after repeating the previously selected text?"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.82.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "16.x",
+		"eslint": "^8.47.0",
+		"glob": "^10.3.3",
+		"mocha": "^10.2.0",
+		"typescript": "^5.1.6",
+		"@vscode/test-electron": "^2.3.4"
+	}
+}
