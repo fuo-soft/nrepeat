@@ -2,12 +2,14 @@
 	"name": "nrepeat",
 	"displayName": "nrepeat",
 	"description": "Repeat text, N times. Text can be anything entered at a prompt, the current selection or the character before the cursor position.",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "fuo-soft",
+	"license": "LGPL-3.0-or-later",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/fuo-soft/nrepeat"
 	},
+	"funding": "https://www.buymeacoffee.com/fuosoft",
 	"engines": {
 		"vscode": "^1.82.0"
 	},
